@@ -1,8 +1,9 @@
 "use client";
 
-import { Float } from "@react-three/drei";
-import { SodaCan, SodaCanProps } from "@/components/SodaCan";
 import { forwardRef, ReactNode } from "react";
+import { Float } from "@react-three/drei";
+
+import { SodaCan, SodaCanProps } from "@/components/SodaCan";
 import { Group } from "three";
 
 type FloatingCanProps = {
@@ -31,11 +32,12 @@ const FloatingCan = forwardRef<Group, FloatingCanProps>(
       <group ref={ref} {...props}>
         <Float
           speed={floatSpeed}
+          rotationIntensity={rotationIntensity}
           floatIntensity={floatIntensity}
           floatingRange={floatingRange}
         >
           {children}
-          <SodaCan />
+          <SodaCan flavor={flavor} />
         </Float>
       </group>
     );
