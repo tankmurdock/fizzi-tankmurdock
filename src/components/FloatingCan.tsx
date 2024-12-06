@@ -43,6 +43,7 @@ const FloatingCan = forwardRef<Group, FloatingCanProps>(
     );
   },
 );
-FloatingCan.displayName = "FLoatingCan";
+
+FloatingCan.displayName = "FloatingCan";
 
 export default FloatingCan;
